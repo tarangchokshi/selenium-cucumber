@@ -9,7 +9,7 @@ You can add your own steps or change the ones you see here.
 * [Click Steps](https://github.com/selenium-cucumber/selenium-cucumber-java/blob/master/doc/canned_steps.md#click-steps)
 * [Progress Steps](https://github.com/selenium-cucumber/selenium-cucumber-java/blob/master/doc/canned_steps.md#progress-steps)
 * [Screenshot Steps](https://github.com/selenium-cucumber/selenium-cucumber-java/blob/master/doc/canned_steps.md#screenshot-steps)
-* [Configuration Steps](https://github.com/selenium-cucumber/selenium-cucumber-java/blob/master/doc/canned_steps.md#configuration-steps)
+* [Configuration Steps](https://github.com/selenium/selenium-cucumber-java/blob/master/doc/canned_steps.md#configuration-steps)
 
 
 ## Navigation Steps
@@ -27,14 +27,11 @@ To switch between windows use following steps :
 	Then I switch to previous window
 	Then I switch to window having title "(.*?)"
 	Then I close new window
-	Then I switch to main window - Not Implemented
+	Then I switch to main window
 
 To switch between frames use following steps :	
 
 	Then I switch to frame having index \"(.*?)
-	Then I switch to frame having name or id \"(.*?)
-	
-	Need Modifiaction 
 	Then I switch to frame having id \"(.*?)
 	Then I switch to frame having name \"(.*?)
 	Then I switch to frame having xpath \"(.*?)
@@ -247,7 +244,7 @@ To assert that radio button not selected use any of the following steps :
 	Then radio button having xpath "(.*?)" should be unselected
 	Then radio button having css "(.*?)" should be unselected
 
-To assert that radio button group selected by text use any of the following steps : By which ???
+To assert that radio button group selected by text use any of the following steps :
 
 	Then option "(.*?)" by text from radio button group having id "(.*?)" should be selected
 	Then option "(.*?)" by text from radio button group having name "(.*?)" should be selected
@@ -297,7 +294,7 @@ To assert text on javascipt pop-up alert use following step :
 
 	Then I should see alert text as "(.*?)"
 
-#### Steps For Asserting Difference in images : NOT IMPLEMENTED
+#### Steps For Asserting Difference in images : Not Implemented
 
 To assert difference in actual image and expected image (from remotely hosted) use following steps :
 
@@ -348,7 +345,7 @@ To clear input field use following steps :
 	Then I clear input field having xpath "([^\"]*)"
 	Then I clear input field having css "([^\"]*)"
 
-#### Steps For Dropdown List : By Which ??
+#### Steps For Dropdown List :
 
 To select option by text from dropdown use following steps :
 
@@ -374,7 +371,7 @@ To select option by value from dropdown use following steps :
 	Then I select "(.*?)" option by value from dropdown having xpath "(.*?)"
 	Then I select "(.*?)" option by value from dropdown having css "(.*?)"
 
-#### Steps For Multiselect List : By Which ??
+#### Steps For Multiselect List :
 
 To select option by text from multiselect dropdown use following steps :
 
@@ -399,8 +396,32 @@ To select option by value from multiselect dropdown use following steps :
 	Then I select "(.*?)" option by value from multiselect dropdown having class "(.*?)"
 	Then I select "(.*?)" option by value from multiselect dropdown having xpath "(.*?)"
 	Then I select "(.*?)" option by value from multiselect dropdown having css "(.*?)"
+
+To deselect option by text from multiselect dropdown use following steps :
+
+	Then I deselect "(.*?)" option by text from multiselect dropdown having id "(.*?)"
+	Then I deselect "(.*?)" option by text from multiselect dropdown having name "(.*?)"
+	Then I deselect "(.*?)" option by text from multiselect dropdown having class "(.*?)"
+	Then I deselect "(.*?)" option by text from multiselect dropdown having xpath "(.*?)"
+	Then I deselect "(.*?)" option by text from multiselect dropdown having css "(.*?)"
 	
-To select all options from multiselect use following steps : Commented in code
+To deselect option by index from multiselect dropdown use following steps :
+
+	Then I deselect (\d+) option by index from multiselect dropdown having id "(.*?)"
+	Then I deselect (\d+) option by index from multiselect dropdown having name "(.*?)"
+	Then I deselect (\d+) option by index from multiselect dropdown having class "(.*?)"
+	Then I deselect (\d+) option by index from multiselect dropdown having xpath "(.*?)"
+	Then I deselect (\d+) option by index from multiselect dropdown having css "(.*?)"
+		
+To deselect option by value from multiselect dropdown use following steps :
+
+	Then I deselect "(.*?)" option by value from multiselect dropdown having id "(.*?)"
+	Then I deselect "(.*?)" option by value from multiselect dropdown having name "(.*?)"
+	Then I deselect "(.*?)" option by value from multiselect dropdown having class "(.*?)"
+	Then I deselect "(.*?)" option by value from multiselect dropdown having xpath "(.*?)"
+	Then I deselect "(.*?)" option by value from multiselect dropdown having css "(.*?)"
+	
+To select all options from multiselect use following steps : *Not Implemented*
 
 	Then I select all options from multiselect dropdown having id "(.*?)"
 	Then I select all options from multiselect dropdown having name "(.*?)"
@@ -408,13 +429,13 @@ To select all options from multiselect use following steps : Commented in code
 	Then I select all options from multiselect dropdown having xpath "(.*?)"
 	Then I select all options from multiselect dropdown having css "(.*?)"
 	
-To unselect all options from multiselect use following steps :
+To deselect all options from multiselect use following steps :
 
-	Then I unselect all options from mutliselect dropdown having id "(.*?)"
-	Then I unselect all options from mutliselect dropdown having name "(.*?)"
-	Then I unselect all options from mutliselect dropdown having class "(.*?)"
-	Then I unselect all options from mutliselect dropdown having xpath "(.*?)"
-	Then I unselect all options from mutliselect dropdown having css "(.*?)"
+	Then I deselect all options from mutliselect dropdown having id "(.*?)"
+	Then I deselect all options from mutliselect dropdown having name "(.*?)"
+	Then I deselect all options from mutliselect dropdown having class "(.*?)"
+	Then I deselect all options from mutliselect dropdown having xpath "(.*?)"
+	Then I deselect all options from mutliselect dropdown having css "(.*?)"
 
 #### Steps For Checkboxes
 
@@ -503,7 +524,7 @@ To click on links use following steps :
 
 Progress Steps
 --------------
-To wait for specific time use following step :
+To implicitly wait for specific time use following step :
 
 	Then I wait for (\d+) sec
 	
